@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MainEntitySpace.qml</file>
+        <file>BasicCamera.qml</file>
+        <file>CustomObjectGL.qml</file>
+    </qresource>
+</RCC>
