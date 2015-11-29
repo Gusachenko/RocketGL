@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>geometryObjects/rocketSample.obj</file>
+        <file>geometryObjects/rocketSample.3ds</file>
+        <file>img/saturnmap.jpg</file>
     </qresource>
 </RCC>

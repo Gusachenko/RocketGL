@@ -2,7 +2,12 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>MainEntitySpace.qml</file>
-        <file>BasicCamera.qml</file>
-        <file>CustomObjectGL.qml</file>
+        <file>robustwireframed.frag</file>
+        <file>robustwireframed.vsh</file>
+        <file>Rocket.qml</file>
+        <file>RocketMaterial.qml</file>
+        <file>RocketShadowEffect.qml</file>
+        <file>Light.qml</file>
+        <file>RocketFrameGraph.qml</file>
     </qresource>
 </RCC>

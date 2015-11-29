@@ -1,0 +1,10 @@
+# RocketGL
+Qt3D Sample<br/>
+Qt 5.5.1
+
+#Add Shader Vertex GLSL to obj
+1.CustomObjectGL: creating material.
+-ambient(окружающий, окружающая среда). ambient: Qt.rgba( 0.2, 0.0, 0.0, 1.0 )
+        
+-diffuse(расплывчатый, рассеяный, смашанный). diffuse: Qt.rgba( 0.8, 0.0, 0.0, 1.0 )
+
