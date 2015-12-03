@@ -9,5 +9,9 @@
         <file>RocketShadowEffect.qml</file>
         <file>Light.qml</file>
         <file>RocketFrameGraph.qml</file>
+        <file>StandBasic.qml</file>
+        <file>StandRotateMain1.qml</file>
+        <file>StandRotateMain2.qml</file>
+        <file>StandRotateMain3.qml</file>
     </qresource>
 </RCC>

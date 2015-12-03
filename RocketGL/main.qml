@@ -3,6 +3,7 @@ import QtQuick 2.4
 import Qt3D.Renderer 2.0
 import Qt3D 2.0
 import QtQuick.Scene3D 2.0
+import QtQuick.Controls 1.3
 
 Item{
     id:i_mainRoot
@@ -20,15 +21,27 @@ Item{
         MainEntitySpace{}
     }//Scene3D END
 
-    Rectangle{
-        id:i_testRect
-        radius: 3
-        width: 100
-        height: 100
-        color: "black"
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-    }
+//    Rectangle{
+//        id:i_testRect
+//        radius: 3
+//        width: 100
+//        height: parent.height
+//        color: "#0000ffff"
+//        anchors.bottom: parent.bottom
+//        anchors.left: parent.left
+
+////        border.color:"lightgreen"
+////        border.width: 1
+
+//        Slider {
+//            id: sliderVertical1
+//            x: 22
+//            y: 22
+//            maximumValue: 360
+//            stepSize: 10
+//            orientation: Qt.Vertical
+//        }
+//    }
 
 }
 
