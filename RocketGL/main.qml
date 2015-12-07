@@ -18,30 +18,23 @@ Item{
 //        focus: true
         aspects: "input"
 
-        MainEntitySpace{}
+        MainEntitySpace{
+        id:i_MainEntitySpace
+        }
     }//Scene3D END
 
-//    Rectangle{
-//        id:i_testRect
-//        radius: 3
-//        width: 100
-//        height: parent.height
-//        color: "#0000ffff"
-//        anchors.bottom: parent.bottom
-//        anchors.left: parent.left
+    Rectangle{
+        id:i_testRect
+        radius: 3
+        width: 100
+        height: parent.height
+        color: "#0000ffff"
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
 
-////        border.color:"lightgreen"
-////        border.width: 1
-
-//        Slider {
-//            id: sliderVertical1
-//            x: 22
-//            y: 22
-//            maximumValue: 360
-//            stepSize: 10
-//            orientation: Qt.Vertical
-//        }
-//    }
+        border.color:"lightgreen"
+        border.width: 1
+    }
 
 }
 
