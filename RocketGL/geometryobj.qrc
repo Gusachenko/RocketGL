@@ -1,12 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>geometryObjects/rocketSample.obj</file>
-        <file>geometryObjects/rocketSample.3ds</file>
         <file>img/saturnmap.jpg</file>
-        <file>geometryObjects/stand/basic.obj</file>
-        <file>geometryObjects/stand/rotateMain1.obj</file>
-        <file>geometryObjects/stand/rotateMain2.obj</file>
-        <file>geometryObjects/stand/rotateMain3.obj</file>
-        <file>geometryObjects/stand/rotateMain2.3ds</file>
     </qresource>
 </RCC>

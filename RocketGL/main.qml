@@ -23,18 +23,5 @@ Item{
         }
     }//Scene3D END
 
-    Rectangle{
-        id:i_testRect
-        radius: 3
-        width: 100
-        height: parent.height
-        color: "#0000ffff"
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-
-        border.color:"lightgreen"
-        border.width: 1
-    }
-
 }
 

@@ -1,49 +1,9 @@
 import Qt3D 2.0
 import Qt3D.Renderer 2.0
-import QtQuick 2.0 as QQ2
-
-import QtQuick 2.4 as BB
 
 Entity{
     id:i_MainEntitySpace
 
-
-    property real test_val: 0.1
-    function testmove(){return test_val=test_val+0.1;}
-
-    property real moveTo_X: 0.1
-    property real moveTo_Y: 0.1
-    property real motion_Angle_CircleValue: 30
-
-    function toRocketCircleMotion(){
-        motion_Angle_CircleValue=motion_Angle_CircleValue+1;
-
-        if(motion_Angle_CircleValue<90){
-            moveTo_X=moveTo_X+0.1;
-            moveTo_Y=moveTo_Y+0.1;
-        }else
-        if(motion_Angle_CircleValue<180){
-            moveTo_X=moveTo_X+0.1;
-            moveTo_Y=moveTo_Y-0.1;
-        }else
-        if(motion_Angle_CircleValue<270){
-            moveTo_X=moveTo_X-0.1;
-            moveTo_Y=moveTo_Y-0.1;
-        }
-        else
-        if(motion_Angle_CircleValue<360){
-            moveTo_X=moveTo_X-0.1;
-            moveTo_Y=moveTo_Y+0.1;
-        }else
-        if(motion_Angle_CircleValue==360){
-            moveTo_X=moveTo_X+0.1;
-            moveTo_Y=moveTo_Y+0.1;
-            motion_Angle_CircleValue=0.1;
-        }
-    }
-
-
-    ////////////////////////////////////////////////////////////////
 
     Light{
         id: light
@@ -98,14 +58,6 @@ Entity{
     //ROCKET ENTITY
     Entity{
 
-        BB.Timer{
-                        running: true
-                        repeat: true
-                        interval: 100
-                        onTriggered: testmove(),toRocketCircleMotion()
-        }
-
-
         property Material material_Rocket: RocketMaterial {
             effect: shadowMapEffectD                            //!!!!
             ambientLight: "green"
@@ -125,14 +77,14 @@ Entity{
             }
             Rotate {
                 axis: Qt.vector3d(0, 1, 0)
-                angle: test_val*50
+                angle: 0
             }
             Rotate {
                 axis: Qt.vector3d(0, 0, -1)
-                angle: motion_Angle_CircleValue
+                angle: 30
             }
             Translate {
-                translation: Qt.vector3d(moveTo_X, moveTo_Y, 0)
+                translation: Qt.vector3d(0.1, 0.1, 0)
             }
 
         }
