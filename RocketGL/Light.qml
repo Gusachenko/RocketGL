@@ -9,7 +9,7 @@ Entity {
     property alias near: lightCamera.nearPlane
     property alias ratio: lightCamera.aspectRatio
 
-    property vector3d lightPosition: Qt.vector3d(0.0, 0.0, 0.0)
+    property vector3d lightPosition: Qt.vector3d(-20.0, 25.0, 25.0)
     property vector3d lightIntensity: Qt.vector3d(1.0, 1.0, 1.0)
 
     readonly property Camera lightCamera: lightCamera

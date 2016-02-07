@@ -32,12 +32,6 @@ Entity{
             viewCamera: camera
             lightCamera: light.lightCamera
         }
-//                FrameGraph {
-//                    activeFrameGraph: ForwardRenderer {
-//                        id: renderer
-//                        camera: camera
-//                    }
-//                }
     ]
 
 
@@ -61,10 +55,6 @@ Entity{
         property Material material_Rocket: RocketMaterial {
             effect: shadowMapEffectD                            //!!!!
             ambientLight: "green"
-            specularColor: Qt.rgba(0.01, 0.01, 0.01, 1.0)
-            diffuseMap: "qrc:/img/saturnmap.jpg"
-            shininess: 1.0
-            opacity: 0.4
         }
 
         property Transform transform_Rocket: Transform {
