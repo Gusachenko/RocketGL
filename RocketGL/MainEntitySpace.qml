@@ -56,7 +56,6 @@ Entity{
             ambientLight: "green"
             diffuseColor: Qt.rgba( 1.0, 1.0, 1.0, 1.0 )
             specularColor: Qt.rgba(0.7, 0.0, 0.0, 1.0)
-//            diffuseMap: "qrc:/img/saturnmap.jpg"
             shininess: 50.0
             opacity: 1.0
         }
