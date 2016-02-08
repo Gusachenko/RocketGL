@@ -1,15 +1,4 @@
-//attribute highp vec4 qt_Vertex;
-//attribute highp vec4 qt_MultiTexCoord0;
-//uniform highp mat4 qt_ModelViewProjectionMatrix;
-//varying highp vec4 qt_TexCoord0;
-
-//void main(void)
-//{
-//    gl_Position = qt_ModelViewProjectionMatrix * qt_Vertex;
-//    qt_TexCoord0 = qt_MultiTexCoord0;
-//}
-
-
+//#version 2 core
 
 attribute vec3 vertexPosition;
 attribute vec3 vertexNormal;
@@ -30,12 +19,7 @@ uniform float texCoordScale;
 
 void main()
 {
-    const mat4 shadowMatrix = mat4(0.5, 0.0, 0.0, 0.0,
-                                   0.0, 0.5, 0.0, 0.0,
-                                   0.0, 0.0, 0.5, 0.0,
-                                   0.5, 0.5, 0.5, 1.0);
-
-    positionInLightSpace = shadowMatrix * lightViewProjection * modelMatrix * vec4(vertexPosition, 1.0);
+    positionInLightSpace = lightViewProjection * modelMatrix * vec4(vertexPosition, 1.0);
 
     texCoord = vertexTexCoord * texCoordScale;
     normal = normalize(modelViewNormal * vertexNormal);

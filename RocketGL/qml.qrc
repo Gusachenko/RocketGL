@@ -9,5 +9,7 @@
         <file>RocketShadowEffect.qml</file>
         <file>Light.qml</file>
         <file>RocketFrameGraph.qml</file>
+        <file>t_frag.fsh</file>
+        <file>t_vert.vsh</file>
     </qresource>
 </RCC>

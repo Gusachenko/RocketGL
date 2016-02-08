@@ -11,7 +11,6 @@ Effect {
         Parameter { name: "lightViewProjection"; value: root.light.lightViewProjection },
         Parameter { name: "lightPosition";  value: root.light.lightPosition },
         Parameter { name: "lightIntensity"; value: root.light.lightIntensity }
-//        Parameter { name: "shadowMapTexture"; value: root.shadowTexture }
     ]
 
     techniques: [
@@ -29,19 +28,64 @@ Effect {
 
                     bindings: [
                         // Uniforms (those provided by the user)
-                        ParameterMapping {parameterName: "ambient"; shaderVariableName: "ka"; bindingType: ParameterMapping.Uniform},
+                        ParameterMapping {
+                            parameterName: "ambient";
+                            shaderVariableName: "ka";
+                            bindingType: ParameterMapping.Uniform
+                        },
                         ParameterMapping { parameterName: "diffuse";  shaderVariableName: "kd"; bindingType: ParameterMapping.Uniform },
-                        ParameterMapping { parameterName: "timeWise";  shaderVariableName: "t_time"; bindingType: ParameterMapping.Uniform }
+                        ParameterMapping {
+                            parameterName: "specular";
+                            shaderVariableName: "ks";
+                            bindingType: ParameterMapping.Uniform
+                        }
                     ]
 
                     shaderProgram: ShaderProgram {
-                        vertexShaderCode:   loadSource("qrc:/t_vert.vsh")
-                        fragmentShaderCode: loadSource("qrc:/t_frag.fsh")
+                        vertexShaderCode:   loadSource("qrc:/robustwireframed.vsh")
+                        fragmentShaderCode: loadSource("qrc:/robustwireframed.frag")
                     }
 
                     // no special render state set => use the default set of states
                 }
             ]
         }
+//        ,
+//        Technique {
+//            openGLFilter {
+//                api: OpenGLFilter.ES
+//                majorVersion: 2
+//                minorVersion: 0
+//            }
+
+//            annotations: [ Annotation { name: "name"; value: "ES2" } ]
+
+//            renderPasses: [
+//                RenderPass {
+//                    annotations: [ Annotation { name : "pass"; value : "forward" } ]
+
+//                    bindings: [
+//                        // Uniforms (those provided by the user)
+//                        ParameterMapping {
+//                            parameterName: "ambient";
+//                            shaderVariableName: "ka";
+//                            bindingType: ParameterMapping.Uniform
+//                        },
+//                        ParameterMapping {
+//                            parameterName: "specular";
+//                            shaderVariableName: "ks";
+//                            bindingType: ParameterMapping.Uniform
+//                        }
+//                    ]
+
+//                    shaderProgram: ShaderProgram {
+//                        vertexShaderCode:   loadSource("qrc:/robustwireframed.vsh")
+//                        fragmentShaderCode: loadSource("qrc:/robustwireframed.frag")
+//                    }
+
+//                    // no special render state set => use the default set of states
+//                }
+//            ]
+//        }
     ]
 }

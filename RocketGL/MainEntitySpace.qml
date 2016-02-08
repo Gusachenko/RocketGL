@@ -4,7 +4,6 @@ import Qt3D.Renderer 2.0
 Entity{
     id:i_MainEntitySpace
 
-
     Light{
         id: light
         ratio: width / height
@@ -55,6 +54,11 @@ Entity{
         property Material material_Rocket: RocketMaterial {
             effect: shadowMapEffectD                            //!!!!
             ambientLight: "green"
+            diffuseColor: Qt.rgba( 1.0, 1.0, 1.0, 1.0 )
+            specularColor: Qt.rgba(0.7, 0.0, 0.0, 1.0)
+//            diffuseMap: "qrc:/img/saturnmap.jpg"
+            shininess: 50.0
+            opacity: 1.0
         }
 
         property Transform transform_Rocket: Transform {

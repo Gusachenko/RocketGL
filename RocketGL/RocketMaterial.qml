@@ -6,15 +6,9 @@ Material {
     id: root
     property color ambientLight: Qt.rgba(0.1, 0.1, 0.1, 1.0)
     property color diffuseColor: Qt.rgba(0.7, 0.7, 0.7, 1.0)
-
-    property real timeValue: 0
-
-    Timer{
-        interval: 10
-        running: true
-        onTriggered: timeValue=timeValue+1
-        repeat: true
-    }
+    property color specularColor: Qt.rgba(0.7, 0.0, 0.0, 1.0)
+    property real shininess: 1.0
+    property real opacity: 1.0
 
     parameters: [
         Parameter {
@@ -26,8 +20,16 @@ Material {
             value: Qt.vector3d(root.diffuseColor.r, root.diffuseColor.g, root.diffuseColor.b)
         },
         Parameter {
-            name: "timeWise"
-            value: timeValue
+            name: "specular"
+            value: Qt.vector3d(root.specularColor.r, root.specularColor.g, root.specularColor.b)
+        },
+        Parameter {
+            name: "shininess"
+            value: root.shininess
+        },
+        Parameter {
+            name: "opacity"
+            value: opacity
         }
     ]
 }
